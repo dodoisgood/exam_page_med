@@ -54,7 +54,7 @@ export const QuestionCard = memo(
     return (
       <article
         id={question.id}
-        className="relative w-full min-w-0 max-w-full overflow-hidden scroll-mt-32 rounded-[1.45rem] border border-white/90 bg-white/82 p-5 shadow-[0_18px_60px_rgba(181,133,117,0.16)] backdrop-blur-2xl dark:border-white/14 dark:bg-[#2b2430]/88 dark:shadow-[0_18px_60px_rgba(0,0,0,0.28)] sm:p-7 question-card-item"
+        className="relative w-full min-w-0 max-w-full overflow-x-visible scroll-mt-32 rounded-[1.45rem] border border-white/90 bg-white/82 p-5 shadow-[0_18px_60px_rgba(181,133,117,0.16)] backdrop-blur-2xl dark:border-white/14 dark:bg-[#2b2430]/88 dark:shadow-[0_18px_60px_rgba(0,0,0,0.28)] sm:p-7 question-card-item"
       >
         <div className="absolute -left-2 top-8 hidden h-12 w-4 rounded-full bg-[#ffddea] dark:bg-[#b65f7c] sm:block" />
         <div className="flex items-start justify-between gap-3 sm:gap-4">
@@ -63,7 +63,7 @@ export const QuestionCard = memo(
               Note {question.question_number.toString().padStart(3, "0")}
               {positionLabel ? <span className="ml-2 text-[#9c7b70] dark:text-[#cbb8c2]">{positionLabel}</span> : null}
             </p>
-            <h2 className="mt-3 break-words text-lg font-semibold leading-8 text-[#4b3b35] sm:text-xl">
+            <h2 className="mt-3 whitespace-normal break-words text-lg font-semibold leading-8 text-[#4b3b35] sm:text-xl">
               {question.question_text}
             </h2>
           </div>

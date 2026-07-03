@@ -27,7 +27,7 @@ export function AnswerOptions({
             type="button"
             onClick={() => onAnswer(option)}
             className={clsx(
-              "group flex min-h-[4.75rem] w-full min-w-0 touch-manipulation items-start gap-3 rounded-[1.05rem] border px-4 py-4 text-left shadow-sm transition sm:min-h-16 sm:gap-4",
+              "group flex min-h-[4.75rem] w-full min-w-0 touch-manipulation items-start gap-3 whitespace-normal rounded-[1.05rem] border px-4 py-4 text-left shadow-sm transition sm:min-h-16 sm:gap-4",
               tone === "correct" &&
                 "border-[#8fd5bd] bg-[#e7f8f0] text-[#315447] shadow-[0_12px_28px_rgba(132,197,174,0.2)] dark:border-[#4f9f84] dark:bg-[#17372e] dark:text-[#d7f7ec] dark:shadow-[0_12px_28px_rgba(27,79,64,0.28)]",
               tone === "wrong" &&
@@ -56,7 +56,7 @@ export function AnswerOptions({
                 option
               )}
             </span>
-            <span className="min-w-0 flex-1 break-words text-[1rem] leading-7 sm:text-base">
+            <span className="min-w-0 flex-1 whitespace-normal break-words text-[1rem] leading-7 sm:text-base">
               {question.options[option]}
             </span>
           </button>

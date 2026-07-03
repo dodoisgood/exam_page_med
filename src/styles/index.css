@@ -352,8 +352,10 @@ select {
 .question-card-item h2,
 .question-card-item p,
 .question-card-item button > span:last-child {
+  white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
+  hyphens: auto;
 }
 
 .flashcard-shell {
