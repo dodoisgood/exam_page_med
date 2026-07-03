@@ -28,12 +28,19 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background: #fff8f4;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-width: 0;
   overflow-x: hidden;
 }
 
@@ -333,6 +340,22 @@ select {
   user-select: none;
 }
 
+.question-card-item,
+.question-card-item h2,
+.question-card-item p,
+.question-card-item button,
+.question-card-item span,
+.question-card-item input {
+  max-width: 100%;
+}
+
+.question-card-item h2,
+.question-card-item p,
+.question-card-item button > span:last-child {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .flashcard-shell {
   max-width: 100%;
 }
@@ -360,6 +383,32 @@ select {
 }
 
 @media (max-width: 640px) {
+  .study-journal,
+  .study-journal header,
+  .study-journal main {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .question-card-item {
+    border-radius: 1.15rem;
+    padding: 1rem;
+  }
+
+  .question-card-item h2 {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .question-card-item button > span:last-child {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .horizontal-drag-scroll {
+    max-width: 100%;
+  }
+
   .flashcard-face {
     padding: 1.25rem;
   }

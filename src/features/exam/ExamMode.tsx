@@ -201,8 +201,8 @@ export function ExamMode({
   ]);
 
   return (
-    <div className="flex min-w-0 items-start gap-6">
-      <section className="min-w-0 flex-1">
+    <div className="flex w-full min-w-0 max-w-full items-start gap-6 overflow-x-hidden">
+      <section className="w-full min-w-0 max-w-full flex-1">
         <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#c4869b]">
