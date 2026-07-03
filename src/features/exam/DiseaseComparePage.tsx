@@ -38,7 +38,17 @@ export function DiseaseComparePage({
   onToggleFavorite,
   onToggleFavoriteTag,
 }: DiseaseComparePageProps) {
-  const [subTab, setSubTab] = useState<"compare" | "instant_kill" | "glossary" | "eponyms" | "guidelines" | "buzzwords">("compare");
+  const [subTab, setSubTab] = useState<"compare" | "instant_kill" | "glossary" | "eponyms" | "guidelines" | "buzzwords">(() => {
+    const saved = localStorage.getItem("disease_compare_sub_tab");
+    if (saved && ["compare", "instant_kill", "glossary", "eponyms", "guidelines", "buzzwords"].includes(saved)) {
+      return saved as "compare" | "instant_kill" | "glossary" | "eponyms" | "guidelines" | "buzzwords";
+    }
+    return "compare";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("disease_compare_sub_tab", subTab);
+  }, [subTab]);
   const [groups, setGroups] = useState<DiseaseComparisonGroup[]>([]);
   const [selectedGroupId, setSelectedGroupId] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
